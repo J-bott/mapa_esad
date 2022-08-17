@@ -62,8 +62,7 @@ svg {
   height: 80vh;
   display: flex;
   justify-content: center;
-  opacity:.5;
-  
+
   transform: translateY(75vh);
   transition: 500ms ease;
 }
