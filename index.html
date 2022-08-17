@@ -64,9 +64,9 @@
         <path display="none" class="vetor" id="Vec-tipografia" d="M58 444.829L155.335 444.829L155.335 187.443L127.425 187.443" stroke="#FF0000" stroke-width="3"/>
         <path display="none" class="vetor" id="Vec-galeria" d="M58.0002 444.83L155.335 444.83L155.335 238.92L172.782 238.92" stroke="#FF0000" stroke-width="3"/>
         <path display="none" class="vetor" id="Vec-cantina" d="M58.0002 444.83L155.335 444.83L155.335 331.58L172.782 331.58" stroke="#FF0000" stroke-width="3"/>
-        <path display="none" class="vetor" id="Vec-madeira-e-metais" d="M58 444.83L155.335 444.83L155.335 190.875L172.782 190.875" stroke="#FF0000" stroke-width="3"/>
+        <path display="none" class="vetor" id="Vec-madeiras" d="M58 444.83L155.335 444.83L155.335 190.875L172.782 190.875" stroke="#FF0000" stroke-width="3"/>
         <path display="none" class="vetor" id="Vec-MDP" d="M58.0002 444.83L156.12 444.83L156.12 184.992L142.915 184.992L142.915 172L127.985 172" stroke="#FF0000" stroke-width="3"/>
-        <path display="none" class="vetor" id="Vec-estudio-fotografia" d="M58.0001 444.83L155.335 444.83L155.335 304.983L114.465 304.983L114.465 282.676L99.6549 282.676" stroke="#FF0000" stroke-width="3"/>
+        <path display="none" class="vetor" id="Vec-fotografia" d="M58.0001 444.83L155.335 444.83L155.335 304.983L114.465 304.983L114.465 282.676L99.6549 282.676" stroke="#FF0000" stroke-width="3"/>
         <path display="none" class="vetor" id="Vec-bathroom" d="M58.0002 444.83L155.335 444.83L155.335 401.074M155.335 401.074L172.782 401.074M155.335 401.074L155.335 317.852L136.681 317.852" stroke="#FF0000" stroke-width="3"/>
 
 
@@ -95,15 +95,34 @@
       <button id="seta">^</button>
 
       <div class="btn-container">
-        <button class="btn-salas" onclick=openSalas()>Salas</button>
-        <button class="btn-oficinas" onclick=openOficinas()>Oficinas</button>
-        <button class="btn-refeitorio" onclick=VecCantina()>Cantina</button> 
-        <button class="btn-papelaria" onclick=VecPapelaria()>Papelaria</button>
-        <button class="btn-informatica" onclick=VecInformatica()>Informática</button>
-        <button class="btn-recepcao" onclick=VecRecepcao()>Recepcão</button>
-        <button class="auditorio" onclick=VecAuditorio()>Auditório</button>
-        <button class="btn-galeria" onclick=VecGaleria()>Galeria</button>
-        <button class="btn-bathroom" onclick=VecBathroom()>Casa de banho</button>
+        <!-- btns visiveis -->
+        <button class="btn opensalas submenu" onclick=openSalas()>Salas</button>
+        <button class="btn oficinas submenu" onclick=openOficinas()>Oficinas</button>
+        <button class="btn refeitorio" onclick=VecCantina()>Cantina</button> 
+        <button class="btn papelaria" onclick=VecPapelaria()>Papelaria</button>
+        <button class="btn informatica" onclick=VecInformatica()>Informática</button>
+        <button class="btn recepcao" onclick=VecRecepcao()>Recepcão</button>
+        <button class="btn auditorio" onclick=VecAuditorio()>Auditório</button>
+        <button class="btn galeria" onclick=VecGaleria()>Galeria</button>
+        <button class="btn bathroom" onclick=VecBathroom()>Casa de banho</button>
+
+        <!-- btns escondidos(salas) -->
+        <button class="btn-sala" >0.01</button>
+        <button class="btn-sala" >0.02</button>
+        <button class="btn-sala" >0.03</button>
+        <button class="btn-sala" >0.04</button>
+        <button class="btn-sala" >0.05</button>
+        <button class="btn-sala" >0.06</button>
+
+
+        <!-- btns escondidos (estudios) -->
+        <button class="btn-oficina" onclick="VecMadeiras()">Madeiras e metais</button>
+        <button class="btn-oficina" onclick="VecTipografia()">Tipografia</button>
+        <button class="btn-oficina" onclick="VecFotografia()">Fotografia</button>
+
+        <!-- btn voltar -->
+        <button class="btn-sala btn-oficina" id="voltarSala" onclick="closeSalas()">Voltar</button>
+
       </div>
     </div>
     <script src="myScript.js"></script>
