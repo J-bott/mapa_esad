@@ -20,6 +20,7 @@ body {
 }
 
 button {
+  max-width: 20em;
   background: none;
   border: 0;
   box-sizing: border-box;
