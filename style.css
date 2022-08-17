@@ -20,7 +20,6 @@ body {
 }
 
 button {
-  width: fit-content;
   background: none;
   border: 0;
   box-sizing: border-box;
@@ -34,7 +33,9 @@ button:active{
   background-color: orangered;
 
 }
-
+.submenu{
+  background-color: rgb(233, 233, 233);
+}
 .main-container {
   width: 100%;
   height: 80%;
@@ -62,7 +63,7 @@ svg {
   height: 80vh;
   display: flex;
   justify-content: center;
-
+  
   transform: translateY(75vh);
   transition: 500ms ease;
 }
@@ -99,6 +100,15 @@ svg {
   transform: rotate(180deg);
   transition: 100ms ease;
   transition-delay: 500ms;
+}
+.btn-sala{
+  display: none;
+}
+.btn-oficina{
+  display: none;
+}
+#voltarSala{
+  background-color: rgb(138, 138, 138);
 }
 @media only screen and (min-width: 400px) {
   svg{
