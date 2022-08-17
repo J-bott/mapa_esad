@@ -1,0 +1,125 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items:center;
+  background-color: black;
+}
+
+#close-vector{
+  position: fixed;
+  left: 50%;
+  margin-top: 1em;
+  display: none;
+}
+
+button {
+  width: fit-content;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: .5em 1em;
+  box-shadow: inset 0 0 0 1px rgb(94, 94, 94);
+  color: rgb(94, 94, 94);
+  font-weight: 500;
+}
+button:active{
+  background-color: orangered;
+
+}
+
+.main-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: 1px solid white;
+}
+
+
+svg {
+  width:87%;
+
+  stroke-dasharray: 800;
+  stroke-dashoffset: 0;
+
+}
+
+#menu{
+  background-color:rgb(70, 70, 70);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  opacity:.5;
+  
+  transform: translateY(75vh);
+  transition: 500ms ease;
+}
+
+#seta {
+  position: absolute;
+  margin: auto;
+  top:-1em;
+ 
+  background-color: inherit;
+  
+}
+#seta:active {
+  background-color: orangered;
+}
+.btn-container{
+  margin: 2em;
+  width: 90%;
+  display: none;
+
+}
+
+
+#menu.open{
+  background-color: rgb(201, 201, 201);
+  transform: translateY(1px);
+}
+
+#menu.open > .btn-container {
+  display: flex;
+  flex-flow: column wrap;
+} 
+#menu.open > #seta{
+  transform: rotate(180deg);
+  transition: 100ms ease;
+  transition-delay: 500ms;
+}
+@media only screen and (min-width: 400px) {
+  svg{
+    transform: rotate(-90deg);
+  }
+}
+
+.animate{
+    animation: dash 20s linear forwards;
+    -webkit-animation: dash 20s linear forwards;
+}
+
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 800;
+  
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
